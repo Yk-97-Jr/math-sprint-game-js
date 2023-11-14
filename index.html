@@ -9,90 +9,95 @@
 </head>
 <body>
     <div class="game-container">
+
+        <!-- Header -->
         <div class="header">
-            <h1>math sprint game</h1>
+            <h1>Math Sprint Game</h1>
         </div>
 
-        <div class="card" id="splash-page" >
-            <form  id="start-form">
+        <!-- Splash Page -->
+        <div class="card" id="splash-page">
+            <form id="start-form">
                 <div class="selection-container">
-                    <div class="radio-container selected">
-                        <label for="value-10">
-                            10 questions
-                        </label>
-                        <input type="radio" name="questions"
-                        value="10" id="value-10">
+                    <!-- 10 Questions Radio Input -->
+                    <div class="radio-container">
+                        <label for="value-10">10 Questions</label>
+                        <input type="radio" name="questions" value="10" id="value-10">
                         <span class="best-score">
-                            <span>best score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span>Best Score</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
+                    <!-- 25 Questions Radio Input -->
                     <div class="radio-container">
-                        <label for="value-25">
-                            25 questions
-                        </label>
-                        <input type="radio" name="questions"
-                        value="25" id="value-25">
+                        <label for="value-25">25 Questions</label>
+                        <input type="radio" name="questions" value="25" id="value-25">
                         <span class="best-score">
-                            <span>best score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span>Best Score</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
+                    <!-- 50 Questions Radio Input -->
                     <div class="radio-container">
-                        <label for="value-50">
-                            50 questions
-                        </label>
-                        <input type="radio" name="questions"
-                        value="50" id="value-50">
+                        <label for="value-50">50 Questions</label>
+                        <input type="radio" name="questions" value="50" id="value-50">
                         <span class="best-score">
-                            <span>best score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span>Best Score</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
+                    <!-- 99 Questions Radio Input -->
                     <div class="radio-container">
-                        <label for="value-99">
-                            99 questions
-                        </label>
-                        <input type="radio" name="questions"
-                        value="99" id="value-99">
+                        <label for="value-99">99 Questions</label>
+                        <input type="radio" name="questions" value="99" id="value-99">
                         <span class="best-score">
-                            <span>best score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span>Best Score</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
                 </div>
+                <!-- Start Button -->
                 <div class="selection-footer">
-                    <button class="start" type="submit">start round</button>
+                    <button class="start" type="submit">Start Round</button>
                 </div>
             </form>
         </div>
 
+        <!-- Countdown Page -->
         <div class="card" id="countdown-page" hidden>
-            <h1 class="countdown"></h1>
+            <h1 class="countdown">3</h1>
         </div>
 
+        <!-- Game Page -->
         <div class="card" id="game-page" hidden>
-            <div class="item-container"> 
-            </div>
+            <!-- Item Container -->
+            <div class="item-container"></div>
+            <!-- Right/Wrong Buttons -->
             <div class="item-footer">
-                <button class="wrong" onclick="select(false)">wrong</button>
-                <button class="right" onclick="select(true)">right</button>
+                <button class="wrong" onclick="select(false)">Wrong</button>
+                <button class="right" onclick="select(true)">Right</button>
             </div>
-        </div>
+        </div>        
+
+        <!-- Score Page -->
         <div class="card" id="score-page" hidden>
+            <!-- Score Container -->
             <div class="score-container">
-                <h1 class="title">your time</h1>
-                <h1 class="h1 final-time">3.4s</h1>
-                <h1 class="base-time">base time: 2.4s</h1>
-                <h1 class="penalty-time">penalty: +1.0s</h1>
+                <h1 class="title">Your Time</h1>
+                <h1 class="final-time"></h1>
+                <h1 class="base-time"></h1>
+                <h1 class="penalty-time"></h1>
             </div>
+            <!-- Play Again Button -->
             <div class="score-footer">
-                <button class="play-again">play again</button>
+                <button class="play-again" onclick="playAgain()" hidden>Play Again</button>
             </div>
         </div>
+
     </div>
     <!-- Script -->
-    <script src="script.js"></script>
     <script src="shuffle.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
